@@ -1,0 +1,72 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+/* ============================== CUSTOM CSS ============================== */
+.demo-frontpage{
+	border: 1px solid #ddd;
+	padding:0 10px;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+.demo-frontpage h2,
+.demo-frontpage h3 {
+	text-shadow:1px 1px 1px #FFF !important;
+	margin: 0;
+}
+.demo-frontpage h3 {
+	padding-bottom: 5px;
+}
+.demo-frontpage h2 {
+	margin-top: 5px;
+}
+.demo-frontpage p {
+	margin: 0;
+}
+.demo-frontpage span {
+	font-size: 0.9em;
+	display: block;
+	margin: 3px 0;
+	color: #999;
+}
+.demo-frontpage .jsn-template-featured {
+	padding-top: 14px;
+}
+.demo-frontpage ul.jsn-template-list {
+	list-style: none;
+	border-left: 1px solid #ececec;
+	margin: 0;
+	box-shadow: -1px 0px 0px 0px #fff;
+}
+.demo-frontpage ul.jsn-template-list li {
+	border-bottom: 1px dotted #ccc;
+	padding:10px 0;
+	margin: 0 0 0 10px;
+}
+.demo-frontpage ul.jsn-template-list li:last-child {
+	border-bottom: none;
+}
+.article_separator {
+	display: none;
+}
+.custom-height {
+	height: 10px;
+}
+@media only screen and (max-width: 960px),
+(max-device-width: 960px) {
+	.demo-frontpage {
+		width:auto;
+		float:none;
+	}
+	.demo-frontpage ul.jsn-template-list {
+		border-left: none;
+	}
+}
+@media only screen and (max-width: 480px),
+(max-device-width: 480px) {
+	.demo-frontpage ul.jsn-template-list li{
+		margin: 0;
+	}
+}
