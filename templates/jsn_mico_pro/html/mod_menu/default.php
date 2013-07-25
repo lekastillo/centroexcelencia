@@ -23,7 +23,7 @@ $jsn_utils   = JSNTplUtils::getInstance();
 // Note. It is important to remove spaces between elements.
 ?>
 <span class="jsn-menu-toggle"><?php echo JText::_('JSN_TPLFW_TOGGLE_MENU'); ?></span>
-<ul class="<?php echo $class_sfx;?>"<?php
+<ul class="<?php echo $class_sfx;?> nav nav-pills"<?php
 	$tag = '';
 	if ($params->get('tag_id')!=NULL) {
 		$tag = $params->get('tag_id').'';
