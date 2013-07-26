@@ -238,6 +238,7 @@ div[id*=jsn-pos-stick-right] {
 /* =============== LAYOUT - HEADER AREA =============== */
 #jsn-logo {
   float: left;
+  padding-top:15px;
 }
 #jsn-logo a {
   line-height: 100%;
@@ -260,7 +261,25 @@ div[id*=jsn-pos-stick-right] {
   margin-left: 0;
 }
 /* =============== LAYOUT - MENU AREA =============== */
+#jsn-menu-fix {
+  z-index: 999;
+  position: relative;
+  margin-bottom: 0px;
+  padding:7px 0px;
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+}
 #jsn-menu {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D6D6D6;
+    border-top: 1px solid #D6D6D6;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    padding: 7px 10px;
+    position: relative;
+    z-index: 999;
+}
+/*#jsn-menu {
   z-index: 999;
   color: #fff;
   position: relative;
@@ -273,13 +292,17 @@ div[id*=jsn-pos-stick-right] {
   margin-bottom: 10px;
   padding:7px 10px;
   border:1px solid #222;
-}
+}*/
 #jsn-pos-mainmenu {
   float: left;
   margin: 0;
 }
 #jsn-pos-toolbar {
   float: right;
+}
+#jsn-menu-fix div.jsn-modulecontainer {
+  float: left;
+  margin:0;
 }
 #jsn-menu div.jsn-modulecontainer {
   float: left;
@@ -1964,7 +1987,9 @@ form#login-form .icon-arrow-right {
 /* =============== JOOMLA! EXTENSIONS - MOD_SEARCH =============== */
 #jsn-pos-top div.search input#mod-search-searchword {
   padding: 2px 0 2px 25px;
+  width:180px;
   background: #FFF url(../images/icons/icons-base.png) 5px -168px no-repeat;
+
 }
 /* =============== JOOMLA! EXTENSIONS - MOD_NEWSFLASH =============== */
 .jsn-mod-newsflash.jsn-horizontal-container .jsn-article {
