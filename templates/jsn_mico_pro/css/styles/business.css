@@ -34,7 +34,7 @@ body.jsn-specialfont .componentheading,
 body.jsn-specialfont .contentheading,
 .breadcrumbs,
 a {
-	font-family: Arial, 'Roboto Condensed', Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family: 'Roboto Condensed', Verdana, Arial, Geneva, Arial, Helvetica, sans-serif;
 }
 body.jsn-textsize-small {
 	font-size: 65%;

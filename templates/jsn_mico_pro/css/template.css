@@ -216,6 +216,11 @@ div.jsn-modulescontainer3 #jsn-pos-user7 {
   margin: 0 auto;
   text-align: left;
 }
+
+#jsn-header {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
 /* ----- STICKLEFT / STICKRIGHT ----- */
 div[id*=jsn-pos-stick-] {
   position: fixed;
@@ -278,6 +283,7 @@ div[id*=jsn-pos-stick-right] {
     padding: 7px 10px;
     position: relative;
     z-index: 999;
+    border-radius: 4px;
 }
 /*#jsn-menu {
   z-index: 999;

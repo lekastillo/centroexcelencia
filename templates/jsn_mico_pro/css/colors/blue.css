@@ -10,8 +10,11 @@ a {
 /* ============================== LAYOUT ============================== */
 /* =============== LAYOUT - OVERALL PAGE =============== */
 #jsn-master {
-	background: url(../../images/colors/blue/bg-master.jpg) top center repeat #d2dfe8;
-	position: relative;
+	/*background: url(../../images/colors/blue/bg-master.jpg) top center repeat #d2dfe8;
+	position: relative;*/
+	background-color: #3CB4D6;
+	background-image: radial-gradient(circle, #2A7ABE, #2C5392);
+	background-repeat: no-repeat;
 }
 #jsn-pos-content-top {
 	background-color: #dfeff8;
@@ -86,7 +89,8 @@ table.style-colorstripes tfoot td {
 /* ----- GENERAL ----- */
 /* ----- 1st LEVEL ----- */
 div.jsn-modulecontainer ul.menu-mainmenu ul {
-	background-color: #16bcf9;
+	background-color: #369DF2;
+
 }
 body.jsn-mmtransparency div.jsn-modulecontainer ul.menu-mainmenu ul {
 	background: #16BCF9;

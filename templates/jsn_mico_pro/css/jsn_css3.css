@@ -454,8 +454,8 @@ div.jsn-modulecontainer ul.menu-mainmenu > li.parent.active:hover > a {
   border-top: 1px solid rgba(0,0,0,0.7);
 }
 body.jsn-css3 ul.menu-mainmenu > li.active > a {
-  box-shadow: 0 1px 0 #555;
-  border-color: rgba(0, 0, 2, 0.25) rgba(0, 0, 2, 0.12) rgba(0, 0, 2, 0.12) rgba(0, 0, 2, 0.25);
+  /*box-shadow: 0 1px 0 #555;
+  border-color: rgba(0, 0, 2, 0.25) rgba(0, 0, 2, 0.12) rgba(0, 0, 2, 0.12) rgba(0, 0, 2, 0.25);*/
   border-radius: 4px;
   -webkit-border-radius:4px;
 }

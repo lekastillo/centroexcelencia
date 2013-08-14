@@ -721,16 +721,15 @@ div.lightbox-1 ul.menu-sidemenu > li.active > a {
 	background-color: transparent;
 }
 div.jsn-modulecontainer ul.menu-mainmenu > li.active > a {
-	color: #fff;
-	font-weight: bold;
-	background: #272727;
-	border-style: solid;
-	border-width: 1px;
+	background-color: #369DF2;
+	background-repeat: repeat-x;
+	color: #FFFFFF;
 	position: relative;
+	padding:5px 10px;
 
 }
 div.jsn-modulecontainer ul.menu-mainmenu > li.active:hover > a {
-	background: #272727;
+	background: #369DF2;
 }
 div.jsn-modulecontainer ul.menu-mainmenu > li.parent.active:hover > a {
 	border-color: transparent;
