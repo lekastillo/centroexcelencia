@@ -387,7 +387,7 @@ ul.menu-topmenu li.active a{
   box-shadow: 0 0 20px #fff,0 0px 20px rgba(0,0,0,0.3) inset !important;
 }
 /* MAIN MENU - SIDE MENU */
-body.jsn-css3 ul.menu-mainmenu li a,
+
 body.jsn-css3 #jsn-menu .jsn-modulecontainer.display-dropdown .jsn-modulecontainer_inner h3.jsn-moduletitle {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }

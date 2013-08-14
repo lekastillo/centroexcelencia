@@ -273,7 +273,7 @@ div[id*=jsn-pos-stick-right] {
     background-color: #FFFFFF;
     border-bottom: 1px solid #D6D6D6;
     border-top: 1px solid #D6D6D6;
-    color: #FFFFFF;
+    color: #000;
     margin-bottom: 10px;
     padding: 7px 10px;
     position: relative;
@@ -853,7 +853,7 @@ div.jsn-modulecontainer ul.menu-mainmenu li {
   list-style-type: none;
 }
 div.jsn-modulecontainer ul.menu-mainmenu li a {
-  color: #FFFFFF;
+  color: #292929;
   display: block;
   font-weight: normal;
   cursor: pointer;
@@ -865,9 +865,8 @@ div.jsn-modulecontainer ul.menu-mainmenu.menu-richmenu > li > a.jsn-nodescriptio
 }
 div.jsn-modulecontainer ul.menu-mainmenu > li > a {
   padding: 3px 15px;
-  text-transform: uppercase;
+  text-transform: none;
   margin-right: 5px;
-  font-weight: bold;
 }
 div.jsn-modulecontainer ul.menu-mainmenu > li.active > a {
   border-radius: 4px;

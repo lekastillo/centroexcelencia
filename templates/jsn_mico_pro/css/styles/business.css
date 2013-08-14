@@ -34,7 +34,7 @@ body.jsn-specialfont .componentheading,
 body.jsn-specialfont .contentheading,
 .breadcrumbs,
 a {
-	font-family: 'Roboto Condensed', Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family: Arial, 'Roboto Condensed', Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 body.jsn-textsize-small {
 	font-size: 65%;
@@ -53,7 +53,7 @@ body.jsn-textstyle-business.jsn-specialfont .jsn-moduletitle {
 	line-height: 1.5;
 }
 body.jsn-textstyle-business.jsn-specialfont ul.menu-mainmenu li {
-	font-size: 1em;
+	font-size: 0.9em;
 }
 body.jsn-textstyle-business.jsn-specialfont .contentheading,
 body.jsn-textstyle-business.jsn-specialfont .componentheading,
@@ -62,11 +62,11 @@ body.jsn-textstyle-business.jsn-specialfont .item-title {
 	font-weight: bold;
 }
 .jsn-textstyle-business div.jsn-modulecontainer ul.menu-mainmenu li > a  {
-	text-transform:uppercase
+	text-transform:none
 }
 .jsn-textstyle-business h3.jsn-moduletitle span.jsn-moduleicon {
 	text-transform:uppercase;
-	font-weight:bold;
+	font-weight:none;
 }
 body.jsn-textstyle-business ul.menu-mainmenu > li > a {
 	font-size: 1.2em;
