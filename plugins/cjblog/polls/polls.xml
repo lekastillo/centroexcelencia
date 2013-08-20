@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="cjblog" method="upgrade">
+    <name>CjBlog - Polls</name>
+	<creationDate>22-May-2013</creationDate>
+    <author>Maverick</author>
+    <authorEmail>support@corejoomla.com</authorEmail>
+    <authorUrl>http://www.corejoomla.com</authorUrl>
+	<copyright>All rights reserved by www.corejoomla.com 2009-12.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.0.1</version>
+    <description>Displays latest 5 polls (from Community Polls componwnt) of a user in his profile.</description>
+    <files>
+        <filename>polls.xml</filename>
+        <filename plugin="polls">polls.php</filename>
+        <filename>index.html</filename>
+    </files>
+	<languages>
+        <language tag="en-GB">en-GB.plg_cjblog_polls.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="num_polls" type="text" default="5" label="Number of Polls" description="Enter number of polls to display."/>
+				<field name="max_length" type="text" default="256" label="Max Length" description="Enter maximum length of the poll description to be displayed. 0 for no description displayed."/>
+			</fieldset>
+		</fields>
+	</config>    
+</extension>

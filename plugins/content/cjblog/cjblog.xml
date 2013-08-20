@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+    <name>Content - CjBlog</name>
+	<creationDate>10-Oct-2012</creationDate>
+    <author>Maverick</author>
+    <authorEmail>support@corejoomla.com</authorEmail>
+    <authorUrl>http://www.corejoomla.com</authorUrl>
+	<copyright>All rights reserved by www.corejoomla.com 2009-12.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>Adds support for CjBlog article headers, ratings, badge and points system to Joomla(R) articles.</description>
+    <files>
+        <filename>cjblog.xml</filename>
+        <filename plugin="cjblog">cjblog.php</filename>
+        <filename>index.html</filename>
+    </files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="include_categories" type="text" default="" label="Include Categories" description="Enter comma separated category ids to include from showing the plugin content."/>
+				<field name="exclude_categories" type="text" default="" label="Exclude Categories" description="Enter comma separated category ids to exclude from showing the plugin content. If include categories option entered, this will be ignored."/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

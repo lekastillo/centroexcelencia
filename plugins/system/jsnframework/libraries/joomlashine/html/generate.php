@@ -359,87 +359,9 @@ class JSNHtmlGenerate
 <div id="jsn-footer" class="jsn-page-footer jsn-bootstrap">
 <div class="pull-left">
 <ul class="jsn-footer-menu">
-	<li class="first">';
-
-		if ( ! empty($links['doc']))
-		{
-			$html[] = '
-		<a href="' . JRoute::_($links['doc']) . '" target="_blank">' . JText::_('JSN_EXTFW_GENERAL_DOCUMENTATION') . '</a>
-	</li>
-	<li>';
-		}
-
-		$html[] = '
-		<a href="http://www.joomlashine.com/contact-us/get-support.html" target="_blank">' . JText::_('JSN_EXTFW_GENERAL_SUPPORT') . '</a>
-	</li>';
-
-		if ( ! empty($links['review']))
-		{
-			$html[] = '
-	<li>
-		<a href="' . JRoute::_($links['review']) . '" target="_blank">' . JText::_('JSN_EXTFW_GENERAL_VOTE') . '</a>
-	</li>';
-		}
-
-		$html[] = '
-	<li class="jsn-iconbar">
-		<strong>' . JText::_('JSN_EXTFW_GENERAL_KEEP_IN_TOUCH') . ':</strong>
-		<a title="' . JText::_('JSN_EXTFW_GENERAL_FACEBOOK') . '" target="_blank" href="http://www.facebook.com/joomlashine"><i class="jsn-icon16 jsn-icon-social jsn-icon-facebook"></i></a><a title="' . JText::_('JSN_EXTFW_GENERAL_TWITTER') . '" target="_blank" href="http://www.twitter.com/joomlashine"><i class="jsn-icon16 jsn-icon-social jsn-icon-twitter""></i></a><a title="' . JText::_('JSN_EXTFW_GENERAL_YOUTUBE') . '" target="_blank" href="http://www.youtube.com/joomlashine"><i class="jsn-icon16 jsn-icon-social jsn-icon-youtube""></i></a>
-	</li>
+	
 </ul>
-<ul class="jsn-footer-menu">
-	<li class="first">';
 
-		if ( ! empty($links['info']))
-		{
-			$html[] = '
-		<a href="' . JRoute::_($links['info']) . '" target="_blank">JSN ' . preg_replace('/JSN\s*/i', '', JText::_($name)) . ' ' . $edition . ' v' . $version . '</a>';
-		}
-		else
-		{
-			$html[] = 'JSN ' . preg_replace('/JSN\s*/i', '', JText::_($name)) . ' ' . $edition . ' v' . $version;
-		}
-
-		$html[] = ' by <a href="http://www.joomlashine.com" target="_blank">JoomlaShine.com</a>';
-
-		if ( ! empty($edition) AND ! empty($links['upgrade']) AND ($pos = strpos('free + pro standard', strtolower($edition))) !== false)
-		{
-			$html[] = '
-		&nbsp;<a class="label label-important" href="' . JRoute::_($links['upgrade']) . '"><strong class="jsn-text-attention">' . JText::_($pos ? 'JSN_EXTFW_GENERAL_UPGRADE_TO_PRO_UNLIMITED' : 'JSN_EXTFW_GENERAL_UPGRADE_TO_PRO') . '</strong></a>';
-		}
-
-		$html[] = '
-	</li>';
-
-		try
-		{
-			$hasUpdate = false;
-
-			foreach (JSNUpdateHelper::check($products) AS $result)
-			{
-				if ($result)
-				{
-					$hasUpdate = true;
-					break;
-				}
-			}
-
-			if ($hasUpdate)
-			{
-				$html[] = '
-	<li id="jsn-global-check-version-result" class="jsn-outdated-version">
-		<span class="jsn-global-outdated-version">' . JText::_('JSN_EXTFW_GENERAL_UPDATE_AVAILABLE') . '</span>
-		&nbsp;<a href="' . JRoute::_($links['update']) . '" class="label label-important">' . JText::_('JSN_EXTFW_GENERAL_UPDATE_NOW') . '</a>
-	</li>';
-			}
-		}
-		catch (Exception $e)
-		{
-			// Simply ignore
-		}
-
-		$html[] = '
-</ul>
 </div>
 <div class="pull-right">
 <ul class="jsn-footer-menu">

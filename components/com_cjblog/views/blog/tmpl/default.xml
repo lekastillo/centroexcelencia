@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="CjBlog Blog Layout">
+		<message>
+			<![CDATA[COM_CJBLOG_BLOG_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>CjBlog Blog Layout</name>
+		<description>CjBlog Blog Page</description>
+	</state>
+</metadata>
