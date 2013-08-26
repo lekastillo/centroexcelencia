@@ -55,6 +55,7 @@ function ($)
 
 		initAjax: function () {
 			$.ajaxSetup({
+				cache: false,
 				complete: $.proxy(function () {
 					this.initialize();
 				}, this)
@@ -176,7 +177,7 @@ function ($)
 						})
 						.done(function (response) {
 							form.data('jsn-form-data', self.serializeForm(form));
-							form.trigger('formSubmitted', { content: response });
+							form.trigger('formSubmitted', { button: button, content: response });
 							button.html(button.data('jsn-default-text'));
 						});
 					}
@@ -200,17 +201,14 @@ function ($)
 			});
 
 			$('form').bind('formSubmitted', function (event, response) {
-				var message = $('<div class="alert alert-block fade in"><a href="javascript:void(0);" title="'
-			         + JSNCoreLanguage['JSN_EXTFW_GENERAL_CLOSE'] + '" data-dismiss="alert" class="close">×</a>'
-			         + response.content + '</div>');
+				var message = $(
+					'<div class="alert alert-block fade in"><a href="javascript:void(0);" title="'
+					+ JSNCoreLanguage['JSN_EXTFW_GENERAL_CLOSE'] + '" class="close">×</a>'
+					+ response.content + '</div>'
+				);
 
-				$('.form-actions .jsn-bootstrap', this)
-					.empty()
-					.append(message);
-
-				$('.close', message).click(function () {
-					message.remove();
-				});
+				response.button.prev().empty().append(message);
+				response.button.prev().find('a.close').click(function() { $(this).parent().remove(); });
 			});
 
 			// Trigger default events on page init

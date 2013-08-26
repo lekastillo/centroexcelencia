@@ -26,6 +26,7 @@ function ($, modal)
 			editSelector: '',
 			revertSelector: ''
 		}, params);
+
 		this.lang = this.params.language || {};
 
 		// Do initialization
@@ -109,10 +110,6 @@ function ($, modal)
 					this.modal.setOption('height', $(window).height() - 72);
 				}
 			}, this));
-		},
-
-		save: function() {
-			$(this.modal.iframe[0].contentWindow.document.languageEditor).trigger('submit');
 		}
 	};
 

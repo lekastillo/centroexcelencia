@@ -133,12 +133,12 @@ define([
                             var comboSubContent = $("<div/>", {"class":"controls clearafter"});
                             if (val && val.type && val.type == "comboContent") {
                                 $.each(val.content, function () {
-                                    var attrClass = this.class?this.class:"";
-                                    var attrId = this.id?this.id:"";
-                                    if(this.type){
-                                         $(comboSubContent).append($("<div/>", {"class":"combo-item "+attrClass,"id":attrId}).append(self.createElementStyle(this, values[this.name])));
+                                    var attrClass = this.class ? this.class : "";
+                                    var attrId = this.id ? this.id : "";
+                                    if (this.type) {
+                                        $(comboSubContent).append($("<div/>", {"class":"combo-item " + attrClass, "id":attrId}).append(self.createElementStyle(this, values[this.name])));
                                     }
-                                   
+
                                 });
                                 $(fieldSetContents).append($("<div/>", {"class":"control-group combo-group"}).append($("<label/>", {"class":"control-label", "text":val.title})).append($(comboSubContent))).append('<div class="clearbreak"></div>');
                             } else if (val && val.type) {
@@ -216,15 +216,18 @@ define([
                     'radio':'<div class="form-inline">{{each(i, val) options.options}}<label for="${id}-${i}" class="radio"><input type="radio" class="jsn-m-radio" name="${options.name}" value="${i}" id="${id}-${i}" {{if value==val}}checked{{/if}} />${val}</label>{{/each}}</div>',
                     'gradient-color':'<input type="hidden" name="${options.name}" id="${id}" class="jsn-grad-ex" value="${value}"><div class="jsn-grad-ex"></div>',
                     'number-px':'<div class="input-append"><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div>',
+                    'input-prepend':'<div class="input-prepend"><span title="${options.titlePrefix}" class="add-on">${options.prefix}</span><input type="${options.attType}"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"></div>',
+                    'input-append':'<div class="input-prepend"><input type="${options.attType}"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span title="${options.titlePrefix}" class="add-on">${options.prefix}</span></div>',
+                    'input-append-prepend':'<div class="input-prepend input-append"><span title="${options.titlePrefixTop}" class="add-on">${options.prefixTop}</span><input type="${options.attType}"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span title="${options.titlePrefixBottom}" class="add-on">${options.prefixBottom}</span></div>',
                     'number':'<input type="number" class="jsn-input-number input-mini" id="${id}" name="${options.name}" value="${value}">',
                     'text':'<input type="text" class="jsn-input-number" id="${id}" name="${options.name}" value="${value}">',
                     'textarea':'<textarea name="${options.name}" id="${id}" rows="3" class="textarea jsn-input-xxlarge-fluid">${value}</textarea>',
                     'select':'<select name="${options.name}" id="${id}" data-selected="${value}" class="select jsn-input-fluid">{{each(i, val) options.options}}<option value="${i}" {{if val==value || (typeof(i) == "string" && i==value)}}selected{{/if}}>${val}</option>{{/each}}</select>',
                     'color':'<input type="text" value="${value}" name="${options.name}" class="jsn-input-fluid" id="${id}" /><div class="jsn-select-color"><div style="background: #ccccc;"></div></div>',
-                    'spacing-top':'<div class="input-prepend input-append"><span class="add-on"><i class="icon-arrow-up"></i></span><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div>',
-                    'spacing-right':'<div class="input-prepend input-append"><span class="add-on"><i class="icon-arrow-right"></i></span><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div> ',
-                    'spacing-bottom':'<div class="input-prepend input-append"><span class="add-on"><i class="icon-arrow-down"></i></span><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div>',
-                    'spacing-left':'<div class="input-prepend input-append"><span class="add-on"><i class="icon-arrow-left"></i></span><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div>'
+                    'spacing-top':'<div class="input-prepend input-append"><span title="${options.titlePrefix}" class="add-on"><i class="icon-arrow-up"></i></span><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div>',
+                    'spacing-right':'<div class="input-prepend input-append"><span title="${options.titlePrefix}" class="add-on"><i class="icon-arrow-right"></i></span><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div> ',
+                    'spacing-bottom':'<div class="input-prepend input-append"><span title="${options.titlePrefix}" class="add-on"><i class="icon-arrow-down"></i></span><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div>',
+                    'spacing-left':'<div class="input-prepend input-append"><span title="${options.titlePrefix}" class="add-on"><i class="icon-arrow-left"></i></span><input type="number"  id="${id}" class="jsn-input-number input-mini" name="${options.name}" value="${value}"><span class="add-on">px</span></div>'
                 };
                 var elementId = 'option-' + options.name + '-' + options.type;
                 if (templates[options.type] !== undefined) {
@@ -264,6 +267,37 @@ define([
             },
             generateStyleCombo:function (name, type, options) {
                 var listStyle = {};
+                listStyle.comboDimension = {
+                    type:"comboContent",
+                    title:"Dimension",
+                    content:{
+                        width:{
+                            name:name + "_width",
+                            label:"",
+                            type:'input-append-prepend',
+                            prefixTop:'W',
+                            prefixBottom:'px',
+                            titlePrefixTop:'Width',
+                            attType:"number",
+                            attrs:{
+                                'class':'jsn-width input-mini'
+                            }
+                        },
+                        height:{
+                            name:name + "_height",
+                            label:"",
+                            type:'input-append-prepend',
+                            prefixTop:'H',
+                            prefixBottom:'px',
+                            titlePrefixTop:'Height',
+                            attType:"number",
+                            attrs:{
+                                'class':'jsn-height input-mini'
+                            }
+                        }
+
+                    }
+                };
                 listStyle.comboContentBorder = {
                     type:"comboContent",
                     title:"Border",
@@ -401,15 +435,19 @@ define([
                     }
                     if (val == "left") {
                         spacingLeft = spacingContent;
+                        spacingLeft.titlePrefix = "Left Padding";
                     }
                     if (val == "right") {
                         spacingRight = spacingContent;
+                        spacingRight.titlePrefix = "Right Padding";
                     }
                     if (val == "bottom") {
                         spacingBottom = spacingContent;
+                        spacingBottom.titlePrefix = "Bottom Padding";
                     }
                     if (val == "top") {
                         spacingTop = spacingContent;
+                        spacingTop.titlePrefix = "Top Padding";
                     }
                 });
 

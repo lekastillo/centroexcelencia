@@ -56,7 +56,6 @@ class JSNBaseHelper
 		}
 
 		$stylesheets[] = JSN_URL_ASSETS . '/joomlashine/css/jsn-gui.css';
-		$stylesheets[] = JSN_URL_ASSETS . '/3rd-party/font-awesome/css/font-awesome.css';
 
 		// Load stylesheets
 		if ( ! $inline)

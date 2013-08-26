@@ -20,6 +20,9 @@
 	border: 1px solid #DDD;
 	border-top: none;
 }
+.jsn-master .ui-tabs .ui-tabs-panel .control-group:last-child {
+	margin-bottom: 0;
+}
 .jsn-master .ui-tabs {
 	padding: 0;
 }
@@ -51,6 +54,9 @@
 	font-weight: bold;
 	color: #333;
 	font-size: 1.1em;
+}
+.jsn-master .ui-tabs .ui-tabs-nav li.ui-state-active a i {
+	font-weight: normal;
 }
 .jsn-master .ui-tabs .ui-tabs-nav li.ui-state-active a:hover {
 	background-color: #fff;
@@ -134,7 +140,13 @@
 	display: none;
 }
 .jsn-master .ui-dialog .ui-dialog-content {
-	padding: 2px 0 2px;
+	padding: 2px 0;
+}
+.jsn-master .jsn-modal.ui-dialog-content {
+	overflow: hidden;
+}
+.jsn-master .ui-dialog .ui-dialog-content iframe {
+	overflow: auto;
 }
 .jsn-master .ui-dialog-content-inner {
 	padding: 15px;
@@ -194,7 +206,7 @@ div.ui-dialog .ui-dialog-titlebar .ui-window-closetext-keyword {
 
 .jsn-master .ui-sortable .ui-state-default {
 	border: 1px solid transparent;
-	padding: 5px;
+	padding: 10px;
 	position: relative;
 	background: none;
 	-webkit-box-shadow: none;
@@ -208,6 +220,9 @@ div.ui-dialog .ui-dialog-titlebar .ui-window-closetext-keyword {
     transition: background 0.3s ease-out;
     -moz-transition: background 0.3s ease-out;
     -webkit-transition: background 0.3s ease-out;
+}
+.jsn-master .ui-sortable .ui-state-default:hover .jsn-iconbar {
+	background-color: #FCF8E3;
 }
 .jsn-master .ui-sortable .ui-state-default.ui-state-edit {
 	cursor: default;
@@ -236,4 +251,51 @@ div.ui-dialog .ui-dialog-titlebar .ui-window-closetext-keyword {
 .jsn-master .jsn-style-dark .ui-sortable .ui-state-default.ui-state-edit {
 	border: 1px solid #666;
 	background-color: #444;
+}
+
+.jsn-master .ui-resizable-e {
+	background: #fff url("../images/backgrounds/bg-handle-resize-h.png") center center no-repeat;
+}
+
+.jsn-master .ui-resizable-s {
+	background: #fff url("../images/backgrounds/bg-handle-resize-v.png") center center no-repeat;
+}
+
+/*========== MODAL WINDOW ========*/
+.ui-dialog.jsn-loading {
+	background-image: url(../images/preloading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.ui-dialog.jsn-loading .ui-dialog-content,
+.ui-dialog.jsn-loading .ui-dialog-buttonpane {
+	visibility: hidden;
+}
+.jsn-modal-overlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	opacity: 0.2;
+	-moz-opacity: 0.2;
+	filter:alpha(opacity=20);
+}
+.jsn-modal-indicator {
+	display: none;
+	content: ' ';
+	background: #000 url(../images/icons-24/icon-24-dark-loading-circle.gif) no-repeat center center;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -20px;
+	margin-top: -20px;
+	border-radius: 3px;
+	opacity: 0.7;
+	-moz-opacity: 0.7;
+	filter:alpha(opacity=70);
 }

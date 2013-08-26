@@ -8,13 +8,13 @@
  * Websites: http://www.joomlashine.com
  * Technical Support:  Feedback - http://www.joomlashine.com/contact-us/get-support.html
  */
- 
+
 /* ============================== JOOMLASHINE GUI ============================== */
 
 @import url("jsn-general.css");
-@import url("jsn-pages.css");
-@import url("jsn-typography.css");
 @import url("jsn-bootstrap.css");
 @import url("jsn-jqueryui.css");
 @import url("jsn-admintemplates.css");
-@import url("jsn-modal.css");
+@import url("jsn-pages.css");
+@import url("jsn-fonticomoon.css");
+@import url("../../3rd-party/font-icomoon/css/icomoon.css");

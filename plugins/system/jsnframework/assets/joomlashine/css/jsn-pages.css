@@ -184,6 +184,9 @@ body.tmpl-isis #toolbar .jsn-bootstrap .jsn-menu .nav {
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
+#toolbar .jsn-drop-menu .navbar .nav {
+	margin-right: 0;
+}
 #toolbar .jsn-drop-menu .navbar .nav li {
 	float: none;
 	margin: 0;
@@ -201,12 +204,12 @@ body.tmpl-isis #toolbar .jsn-bootstrap .jsn-menu .nav {
 }
 #toolbar .jsn-drop-menu .navbar .nav > li > button {
 	margin-top: 0;
-	margin-bottom: -16px;
+	margin-bottom: -26px;
 	font-size: 12px;
-	line-height: 16px;
+	line-height: 18px;
 }
 #toolbar .jsn-drop-menu .navbar .nav .dropdown-toggle > .caret {
-	margin-top: 5px;
+	margin-top: 6px;
 }
 #toolbar .jsn-drop-menu .navbar .nav > .dropdown > .dropdown-menu {
 	top: 29px;
@@ -240,28 +243,6 @@ body.tmpl-isis #toolbar .jsn-bootstrap .jsn-menu .nav {
 	border: none;
 }
 /*=================== PAGE - LIST ===========================*/
-.jsn-master .jsn-page-list .jsn-fieldset-filter {
-	margin-bottom: 10px;
-}
-.jsn-master .jsn-page-list .jsn-fieldset-filter label,
-.jsn-master .jsn-page-list .jsn-fieldset-filter input,
-.jsn-master .jsn-page-list .jsn-fieldset-filter select,
-.jsn-master .jsn-page-list .jsn-fieldset-filter .btn {
-	margin: 0 3px;
-	float: left;
-}
-.jsn-master .jsn-page-list .jsn-fieldset-search {
-}
-.jsn-master .jsn-page-list .jsn-fieldset-select {
-}
-.jsn-master .jsn-page-list .jsn-fieldset-filter-select {
-	width: 250px;
-	padding-bottom: 10px;
-}
-.jsn-master .jsn-page-list .jsn-fieldset-filter-select select{
-	float: left;
-    margin: 2px 3px;
-}
 .jsn-master .jsn-page-list .container {
 	margin: 0;
 	width: auto;
@@ -343,6 +324,7 @@ body.tmpl-isis #toolbar .jsn-bootstrap .jsn-menu .nav {
 }
 /*=================== PAGE - CONFIGURATION ===========================*/
 .jsn-master .jsn-page-configuration {
+	margin: 10px 0;
 	overflow: hidden;
 	position: relative;
 	border: 1px solid #CCC;

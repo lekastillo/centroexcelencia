@@ -150,7 +150,7 @@ class PlgSystemJSNFramework extends JPlugin
 			// Ask user to review JoomlaShine product on JED
 			$this->askForReview();
 		}
-		elseif (self::$_app->input->getCmd('poweradmin', 0) == 1)
+		elseif (JSNVersion::isJoomlaCompatible('3.0') AND self::$_app->input->getCmd('poweradmin', 0) == 1)
 		{
 			$jsnHelper = JSNPositionsModel::_getInstance();
 			$jsnHelper->renderEmptyModule();

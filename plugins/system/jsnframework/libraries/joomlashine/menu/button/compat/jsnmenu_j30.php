@@ -114,7 +114,7 @@ class JToolbarButtonJSNMenu extends JToolbarButton
 
 		$attrs = implode(' ', $attrs);
 
-		$icon = empty($params[5]) ? '' : '<span class="' . $params[5] . '"></span> ';
+		$icon = empty($params[5]) ? '' : '<i class="' . $params[5] . '"></i> ';
 		$text = JText::_($params[2]);
 
 		// Generate markup tag for drop-down menu
@@ -245,7 +245,7 @@ class JToolbarButtonJSNMenu extends JToolbarButton
 			}
 			elseif ( ! empty($data['icon']))
 			{
-				$icon = '<span class="' . $data['icon'] . '"></span> ';
+				$icon = '<i class="' . $data['icon'] . '"></i> ';
 			}
 
 			if ( ! $nestedMenu)
